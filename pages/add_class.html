@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Classes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-200">
+    <div class="flex h-screen flex-col md:flex-row">
+
+        <!-- Sidebar -->
+<div id="sidebar"
+class="w-64 bg-black text-white p-5 box-border fixed top-0 left-0 h-full transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-10">
+<div class="text-center mb-6">
+  <img src="../assets/images/logo.png" alt="Logo" class="block mx-auto mb-4 w-32 h-auto">
+</div>
+<ul>
+  <!-- Admin Section -->
+  <li class="relative group mb-3">
+    <!-- Admin Menu -->
+    <a href="#"
+       class="flex items-center justify-between px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+      <span class="flex items-center">
+        <i class="fas fa-user-shield mr-3"></i> Admin
+      </span>
+      <!-- Arrow Icon -->
+      <i class="fas fa-chevron-down ml-auto hidden group-hover:inline-block transform transition-transform"></i>
+    </a>
+    
+    <!-- Dropdown Menu -->
+    <ul class="ml-4 hidden group-hover:block bg-gray-700 rounded mt-2">
+      <li>
+        <a href="../pages/staff_trainer.html" 
+           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+          <i class="fas fa-users mr-3"></i> Staff / Trainers
+        </a>
+      </li>
+      <li>
+        <a href="../pages/membership.html" 
+           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+          <i class="fas fa-user-check mr-3"></i> Membership
+        </a>
+      </li>
+      <li>
+        <a href="../pages/all_classes.html" 
+           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+          <i class="fas fa-chalkboard-teacher mr-3"></i> All Classes
+        </a>
+      </li>
+      <li>
+        <a href="../pages/attendance.html" 
+           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+          <i class="fas fa-calendar-check mr-3"></i> Attendance
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <!-- All Members Section -->
+  <li class="relative group mb-3">
+    <!-- Admin Menu -->
+    <a href="#"
+       class="flex items-center justify-between px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+      <span class="flex items-center">
+        <i class="fas fa-user-shield mr-3"></i> All Members
+      </span>
+      <!-- Arrow Icon -->
+      <i class="fas fa-chevron-down ml-auto hidden group-hover:inline-block transform transition-transform"></i>
+    </a>
+    
+    <!-- Dropdown Menu -->
+    <ul class="ml-4 hidden group-hover:block bg-gray-700 rounded mt-2">
+      <li>
+        <a href="../pages/add_trainer.html" 
+           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+          <i class="fas fa-users mr-3"></i> Add Trainee
+        </a>
+      </li>
+      <li>
+        <a href="../pages/dropped_trainee.html" 
+           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+          <i class="fas fa-user-check mr-3"></i> Dropped Trainee
+        </a>
+      </li>
+      <li>
+        <a href="../pages/member_details.html" 
+           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+          <i class="fas fa-chalkboard-teacher mr-3"></i> Member Details
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <!-- Other Links -->
+  <li class="my-3">
+    <a href="#"
+       class="flex items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+      <i class="fas fa-dumbbell mr-3"></i> Trainer
+    </a>
+  </li>
+  <li class="my-3">
+    <a href="#"
+       class="flex items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+      <i class="fas fa-user mr-3"></i> Trainee
+    </a>
+  </li>
+  <li class="my-3">
+    <a href="#"
+       class="flex items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+      <i class="fas fa-heartbeat mr-3"></i> Health Updates
+    </a>
+  </li>
+  <li class="my-3">
+    <a href="#"
+       class="flex items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+      <i class="fas fa-wallet mr-3"></i> Member Payments
+    </a>
+  </li>
+  <li class="my-3">
+    <a href="#"
+       class="flex items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+      <i class="fas fa-clipboard mr-3"></i> Plan
+    </a>
+  </li>
+</ul>
+</div>
+
+        <!-- Main Content Area -->
+        <div id="main-content" class="flex-1 pl-0 md:pl-64 transition-all duration-300">
+
+            <!-- Hamburger Icon -->
+            <div class="md:hidden p-4">
+                <button id="hamburger" class="text-gray-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Header -->
+            <header class="flex justify-between items-center p-4 bg-gray-200 shadow-md">
+                <h1 class="text-xl font-bold">Welcome Admin!</h1>
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-600"><i class="fas fa-bell"></i></button>
+                    <button class="text-gray-600"><i class="fas fa-cog"></i></button>
+                    <div class="flex items-center">
+                        <h1 class="text-lg font-bold">Username</h1>
+                        <img src="../assets/images/User.png" alt="User" class="w-10 h-10 rounded-full border ml-2">
+                    </div>
+                </div>
+            </header>
+ <!-- Main Table Section -->
+ <div class="p-4">
+    <div class="mt-6 bg-white shadow-md rounded-lg p-4 py-2 px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-4">
+            <h2 class="text-lg font-semibold">Add Class</h2>
+            <div class="flex items-center space-x-2 mt-2 md:mt-0">
+
+                <div class="relative">
+                    <i class="fas fa-search absolute right-3 top-3 text-gray-400"></i>
+                    <input type="text" placeholder="Search Class Name"
+                        class="border border-grey-200 rounded-full pl-5 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full" />
+                </div>
+
+                
+
+            </div>
+        </div>
+        <hr class="-mx-4 mb-3 border-t-2 border-black rounded-lg">
+        <!-- Responsive Table -->
+        <div class="overflow-x-auto max-h-[500px] overflow-y-auto">
+            <table class="w-full border-collapse border-b">
+              <thead class="bg-gray-200">
+                <tr>
+                  <th class="border-b px-4 py-2">Sr.No</th>
+                  <th class="border-b px-4 py-2">Class Name</th>
+                  <th class="border-b px-4 py-2">Class Trainer</th>
+                  <th class="border-b px-4 py-2">Start Time</th>
+                  <th class="border-b px-4 py-2">End Time</th>
+                  <th class="border-b px-4 py-2 w-1/4">Description</th>
+                  <th class="border-b px-4 py-2">Batch</th>
+                  <th class="border-b px-4 py-2">Batch</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border-b text-center">1</td>
+                  <td class="border-b px-4 py-2 text-center"><i class="fas fa-running text-blue-500"></i> Yoga</td>
+                  <td class="border-b px-4 py-2 text-center">Trainer Name</td>
+                  <td class="border-b px-4 py-2 text-center">08.00 Am</td>
+                  <td class="border-b px-4 py-2 text-center">09.00 Am</td>
+                  <td class="border-b px-4 py-2 text-center w-1/4">From a yoga class, you'll learn to improve flexibility, build strength, enhance balance, and develop......</td>
+                  <td class="border-b px-4 py-2 text-center">Morning</td>
+                  <td class="border-b px-4 py-2 text-center">Sunday, Monday</td>
+                </tr>
+                
+                <!-- New input row below each existing row -->
+                <tr>
+                  <td class="border-b px-4 py-2"><input type="text" placeholder="Enter Sr.No" class="w-full border bg-gray-100 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" /></td>
+                  <td class="border-b px-4 py-2"><input type="text" placeholder="Enter Class Name" class="w-full bg-gray-100 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" /></td>
+                  <td class="border-b px-4 py-2"><input type="text" placeholder="Enter Trainer Name" class="w-full bg-gray-100 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" /></td>
+                  <td class="border-b px-4 py-2"><input type="time" class="w-full border border-gray-300 rounded-md bg-gray-100 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" /></td>
+                  <td class="border-b px-4 py-2"><input type="time" class="w-full border border-gray-300 rounded-md bg-gray-100 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" /></td>
+                  <td class="border-b px-4 py-2"><input type="text" placeholder="Enter Description" class="w-full border bg-gray-100border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" /></td>
+                  <td class="border-b px-4 py-2"><input type="text" placeholder="Enter Batch" class="w-full border bg-gray-100  border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" /></td>
+                  <td class="border-b px-4 py-2"><input type="text" placeholder="Enter Batch" class="w-full borderbg-gray-100 border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" /></td>
+                  <td class="p-3 border-b"><i class="fa fa-times"></i></td>
+                  
+                </tr>
+              </tbody>
+            </table>
+          
+           
+              <button class="mt-4 text-orange-500 hover:text-orange-600 font-medium flex items-center">
+                 Add Class <span class="text-lg mr-2">+</span>
+              </button>
+            </div>
+          
+            <div class="mt-16 flex justify-start space-x-4">
+              <button class="bg-orange-500 text-white px-6 py-2 rounded-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                Save
+              </button>
+              <button class="bg-gray-300 text-gray-700 px-6 py-2 rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400">
+                Reset
+              </button>
+            </div>
+          </div>
+          <script>
+            // JavaScript for Sidebar Toggling
+            const hamburger = document.getElementById('hamburger');
+            const sidebar = document.getElementById('sidebar');
+        
+            hamburger.addEventListener('click', () => {
+              // Toggle the sidebar visibility
+              if (sidebar.classList.contains('-translate-x-full')) {
+                sidebar.classList.remove('-translate-x-full');
+              } else {
+                sidebar.classList.add('-translate-x-full');
+              }
+            });
+        
+            // Close sidebar if clicked outside (optional)
+            window.addEventListener('click', (event) => {
+              if (!sidebar.contains(event.target) && !hamburger.contains(event.target) && !sidebar.classList.contains('-translate-x-full')) {
+                sidebar.classList.add('-translate-x-full');
+              }
+            });
+        
+            
+            document.querySelectorAll('input[type="checkbox"]').forEach(toggle => {
+        toggle.addEventListener('change', function () {
+          const label = this.nextElementSibling;
+          const subsections = label.nextElementSibling;
+  
+          if (this.checked) {
+      subsections.classList.remove('hidden'); // Show dropdown
+    } else {
+      subsections.classList.add('hidden'); // Hide dropdown
+    }
+        });
+      });
+          </script>
+</body>
+</html>

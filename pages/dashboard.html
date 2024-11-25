@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body class="bg-gray-200">
+    <!-- <div class="flex flex-col md:flex-row"> -->
+        <!-- Sidebar -->
+        <!-- <iframe src="../components/sidebar.html" class="w-full md:w-64 h-screen border-r-2 md:block-hidden"></iframe> -->
+        
+
+         <!-- Sidebar (hidden on small screens) -->
+       
+        <!-- Main Content -->
+        <!-- <div class="flex-1">
+            
+            <iframe src="../components/header.html" class="w-full h-20 border-b-2"></iframe> -->
+            <div class="flex h-screen flex-col md:flex-row">
+
+                <!-- Sidebar -->
+  <div class="fixed top-0 left-0 bg-black w-64 h-full text-white p-5 box-border">
+    <div class="text-center mb-6">
+      <img src="../assets/images/logo.png" alt="Logo" class="block mx-auto mb-4 w-32 h-auto">
+    </div>
+    <ul>
+      <!-- Admin Section -->
+      <li>
+        <input type="checkbox" id="admin-toggle" class="hidden">
+        <label for="admin-toggle" class="flex items-center justify-between p-3 rounded cursor-pointer hover:bg-gray-700">
+          <span class="flex items-center">
+            <i class="fas fa-user-shield mr-3"></i> Admin
+          </span>
+        </label>
+        <ul class="hidden px-2 bg-gray-700 rounded">
+          <li class="my-1"><a href="#" class="flex items-center p-2 text-sm hover:text-orange-500"><i class="fas fa-user mr-3"></i> Staff/Trainers</a></li>
+          <li class="my-1"><a href="#" class="flex items-center p-2 text-sm hover:text-orange-500"><i class="fas fa-credit-card mr-3"></i> Membership</a></li>
+          <li class="my-1"><a href="#" class="flex items-center p-2 text-sm hover:text-orange-500"><i class="fas fa-dumbbell mr-3"></i> All Classes</a></li>
+          <li class="my-1"><a href="#" class="flex items-center p-2 text-sm hover:text-orange-500"><i class="fas fa-calendar-check mr-3"></i> Attendance</a></li>
+        </ul>
+      </li>
+
+      <!-- Member Section -->
+      <li>
+        <input type="checkbox" id="member-toggle" class="hidden">
+        <label for="member-toggle" class="flex items-center justify-between p-3 rounded cursor-pointer hover:bg-gray-700">
+          <span class="flex items-center">
+            <i class="fas fa-users mr-3"></i> All Members
+          </span>
+        </label>
+        <ul class="hidden px-2 bg-gray-700 rounded">
+          <!-- Add this to the "Add Trainee" link in the sidebar -->
+<li class="my-1">
+  <a href="../pages/add_trainer.html" class="flex items-center p-2 text-sm hover:text-orange-500">
+    <i class="fas fa-user mr-3"></i> Add Trainee
+  </a>
+</li>
+
+          <li class="my-1"><a href="#" class="flex items-center p-2 text-sm hover:text-orange-500"><i class="fas fa-credit-card mr-3"></i> Dropped Trainee</a></li>
+          <li class="my-1"><a href="#" class="flex items-center p-2 text-sm hover:text-orange-500"><i class="fas fa-dumbbell mr-3"></i> Member Details</a></li>
+        </ul>
+      </li>
+
+      <!-- Other Links -->
+      <li class="my-1"><a href="#" class="flex items-center p-3 rounded hover:bg-gray-700"><i class="fas fa-dumbbell mr-3"></i> Trainer</a></li>
+      <li class="my-1"><a href="#" class="flex items-center p-3 rounded hover:bg-gray-700"><i class="fas fa-user mr-3"></i> Trainee</a></li>
+      <li class="my-1"><a href="#" class="flex items-center p-3 rounded hover:bg-gray-700"><i class="fas fa-heartbeat mr-3"></i> Health Updates</a></li>
+      <li class="my-1"><a href="#" class="flex items-center p-3 rounded hover:bg-gray-700"><i class="fas fa-wallet mr-3"></i> Member Payments</a></li>
+      <li class="my-1"><a href="#" class="flex items-center p-3 rounded hover:bg-gray-700"><i class="fas fa-clipboard mr-3"></i> Plan</a></li>
+    </ul>
+  </div>
+            
+                <!-- Main Content Area -->
+                <div id="main-content" class="flex-1 pl-0 md:pl-64 transition-all duration-300">
+            
+                  <!-- Hamburger Icon -->
+                  <div class="md:hidden p-4">
+                    <button id="hamburger" class="text-gray-600">
+                      <i class="fas fa-bars"></i>
+                    </button>
+                  </div>
+            
+                  <!-- Header -->
+                  <header class="flex justify-between items-center p-4 bg-gray-200 shadow-md">
+                    <h1 class="text-xl font-bold">Welcome Admin!</h1>
+                    <div class="flex items-center space-x-4">
+                      <button class="text-gray-600"><i class="fas fa-bell"></i></button>
+                      <button class="text-gray-600"><i class="fas fa-cog"></i></button>
+                      <div class="flex items-center">
+                        <h1 class="text-lg font-bold">Username</h1>
+                        <img src="../assets/images/User.png" alt="User" class="w-10 h-10 rounded-full border ml-2">
+                      </div>
+                    </div>
+                  </header>
+
+            <!-- Dashboard Section -->
+            <div class="p-6">
+                <!-- Overview Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                    <div class="relative bg-cover bg-center bg-no-repeat p-4 rounded-lg shadow-lg text-white w-full h-48" style="background-image: url('../assets/images/gym.jpg'); filter: grayscale(100%);">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 rounded-b-lg">
+                            <h2 class="text-2xl font-bold flex items-center">Class</h2>
+                            <p class="text-2xl absolute font-bold right-4 bottom-4">4</p>
+                        </div>
+                    </div>
+                    <div class="relative bg-cover bg-center bg-no-repeat p-4 rounded-lg shadow-lg text-white w-full h-48" style="background-image: url('../assets/images/class.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 rounded-b-lg">
+                            <h2 class="text-2xl font-bold flex items-center">Trainers</h2>
+                            <p class="text-2xl absolute font-bold right-4 bottom-4">10</p>
+                        </div>
+                    </div>
+                    <div class="relative bg-cover bg-center bg-no-repeat p-4 rounded-lg shadow-lg text-white w-full h-48" style="background-image: url('../assets/images/workout.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 rounded-b-lg">
+                            <h2 class="text-2xl font-bold flex items-center">Members</h2>
+                            <p class="text-2xl absolute font-bold right-4 bottom-4">20</p>
+                        </div>
+                    </div>
+                    <div class="relative bg-cover bg-center bg-no-repeat p-4 rounded-lg shadow-lg text-white w-full h-48" style="background-image: url('../assets/images/fitness.jpg');">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 rounded-b-lg">
+                            <h2 class="text-2xl font-bold flex items-center">Payments</h2>
+                            <p class="text-2xl absolute font-bold right-4 bottom-4"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Table Section -->
+                <div class="flex flex-col lg:flex-row gap-4">
+                    <!-- Table Section -->
+                    <div class="flex-none bg-white p-6 rounded-lg shadow-md w-full lg:w-2/3">
+                        <h3 class="text-lg font-bold mb-2">New Registrations</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full border">
+                                <thead class="bg-gray-100 text-center">
+                                    <tr>
+                                        <th class="px-6 py-2 border-b">Sr. No</th>
+                                        <th class="px-6 py-2 border-b">Full Name</th>
+                                        <th class="px-6 py-2 border-b">Contact No.</th>
+                                        <th class="px-6 py-2 border-b">Class</th>
+                                        <th class="px-6 py-2 border-b">Period</th>
+                                        <th class="px-6 py-2 border-b">Time Slot</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                    <tr class="border-b text-center">
+                                        <td class="px-6 py-2">1</td>
+                                        <td class="px-6 py-2">Rohan Jadhav</td>
+                                        <td class="px-6 py-2">1234567890</td>
+                                        <td class="px-6 py-2">Yoga</td>
+                                        <td class="px-6 py-2">2 Months</td>
+                                        <td class="px-6 py-2">08:00-09:00</td>
+                                    </tr>
+                                    
+                                </tbody>
+                                <tbody>
+                                  
+                                  <tr class="border-b text-center">
+                                      <td class="px-6 py-2">1</td>
+                                      <td class="px-6 py-2">Rohan Jadhav</td>
+                                      <td class="px-6 py-2">1234567890</td>
+                                      <td class="px-6 py-2">Yoga</td>
+                                      <td class="px-6 py-2">2 Months</td>
+                                      <td class="px-6 py-2">08:00-09:00</td>
+                                  </tr>
+                                  
+                              </tbody>
+                              <tbody>
+                                
+                                <tr class="border-b text-center">
+                                    <td class="px-6 py-2">1</td>
+                                    <td class="px-6 py-2">Rohan Jadhav</td>
+                                    <td class="px-6 py-2">1234567890</td>
+                                    <td class="px-6 py-2">Yoga</td>
+                                    <td class="px-6 py-2">2 Months</td>
+                                    <td class="px-6 py-2">08:00-09:00</td>
+                                </tr>
+                                
+                            </tbody>
+                            <tbody>
+                              
+                              <tr class="border-b text-center">
+                                  <td class="px-6 py-2">1</td>
+                                  <td class="px-6 py-2">Rohan Jadhav</td>
+                                  <td class="px-6 py-2">1234567890</td>
+                                  <td class="px-6 py-2">Yoga</td>
+                                  <td class="px-6 py-2">2 Months</td>
+                                  <td class="px-6 py-2">08:00-09:00</td>
+                              </tr>
+                              
+                          </tbody>
+                          <tbody>
+                            
+                            <tr class="border-b text-center">
+                                <td class="px-6 py-2">1</td>
+                                <td class="px-6 py-2">Rohan Jadhav</td>
+                                <td class="px-6 py-2">1234567890</td>
+                                <td class="px-6 py-2">Yoga</td>
+                                <td class="px-6 py-2">2 Months</td>
+                                <td class="px-6 py-2">08:00-09:00</td>
+                            </tr>
+                            
+                        </tbody>
+                        <tbody>
+                          
+                          <tr class="border-b text-center">
+                              <td class="px-6 py-2">1</td>
+                              <td class="px-6 py-2">Rohan Jadhav</td>
+                              <td class="px-6 py-2">1234567890</td>
+                              <td class="px-6 py-2">Yoga</td>
+                              <td class="px-6 py-2">2 Months</td>
+                              <td class="px-6 py-2">08:00-09:00</td>
+                          </tr>
+                          
+                      </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Chart Section -->
+                    <div class="flex-1 bg-white p-4 rounded-lg shadow-md w-full lg:w-1/3">
+                        <h3 class="text-lg font-bold mb-4">Total Trainee</h3>
+                        <div class="w-64 h-64 mx-auto bg-gray-100 rounded-full flex items-center justify-center">
+                            <img src="../assets/images/chart.jpg" class="w-full h-full object-cover rounded-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // JavaScript for Sidebar Toggling
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.getElementById('sidebar');
+    
+        hamburger.addEventListener('click', () => {
+          // Toggle the sidebar visibility
+          if (sidebar.classList.contains('-translate-x-full')) {
+            sidebar.classList.remove('-translate-x-full');
+          } else {
+            sidebar.classList.add('-translate-x-full');
+          }
+        });
+    
+        // Close sidebar if clicked outside (optional)
+        window.addEventListener('click', (event) => {
+          if (!sidebar.contains(event.target) && !hamburger.contains(event.target) && !sidebar.classList.contains('-translate-x-full')) {
+            sidebar.classList.add('-translate-x-full');
+          }
+        });
+    
+        
+        document.querySelectorAll('input[type="checkbox"]').forEach(toggle => {
+        toggle.addEventListener('change', function () {
+          const label = this.nextElementSibling;
+          const subsections = label.nextElementSibling;
+  
+          if (this.checked) {
+      subsections.classList.remove('hidden'); // Show dropdown
+    } else {
+      subsections.classList.add('hidden'); // Hide dropdown
+    }
+        });
+      });
+      </script>
+</body>
+</html>

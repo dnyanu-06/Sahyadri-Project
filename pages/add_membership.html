@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <title>Add Membership</title>
+</head>
+<body class="bg-gray-100 ">
+  <div class="flex flex-col md:flex-row ">
+    <!-- Sidebar -->
+<div id="sidebar"
+class="w-64 bg-black text-white p-5 box-border fixed top-0 left-0 h-full transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-10">
+<div class="text-center mb-6">
+  <img src="../assets/images/logo.png" alt="Logo" class="block mx-auto mb-4 w-32 h-auto">
+</div>
+<ul>
+  <!-- Admin Section -->
+  <li class="relative group mb-3">
+    <!-- Admin Menu -->
+    <a href="#"
+       class="flex items-center justify-between px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+      <span class="flex items-center">
+        <i class="fas fa-user-shield mr-3"></i> Admin
+      </span>
+      <!-- Arrow Icon -->
+      <i class="fas fa-chevron-down ml-auto hidden group-hover:inline-block transform transition-transform"></i>
+    </a>
+    
+    <!-- Dropdown Menu -->
+    <ul class="ml-4 hidden group-hover:block bg-gray-700 rounded mt-2">
+      <li>
+        <a href="../pages/staff_trainer.html" 
+           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+          <i class="fas fa-users mr-3"></i> Staff / Trainers
+        </a>
+      </li>
+      <li>
+        <a href="../pages/membership.html" 
+           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+          <i class="fas fa-user-check mr-3"></i> Membership
+        </a>
+      </li>
+      <li>
+        <a href="../pages/all_classes.html" 
+           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+          <i class="fas fa-chalkboard-teacher mr-3"></i> All Classes
+        </a>
+      </li>
+      <li>
+        <a href="../pages/attendance.html" 
+           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+          <i class="fas fa-calendar-check mr-3"></i> Attendance
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <!-- All Members Section -->
+  <li class="relative group mb-3">
+    <!-- Admin Menu -->
+    <a href="#"
+       class="flex items-center justify-between px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+      <span class="flex items-center">
+        <i class="fas fa-user-shield mr-3"></i> All Members
+      </span>
+      <!-- Arrow Icon -->
+      <i class="fas fa-chevron-down ml-auto hidden group-hover:inline-block transform transition-transform"></i>
+    </a>
+    
+    <!-- Dropdown Menu -->
+    <ul class="ml-4 hidden group-hover:block bg-gray-700 rounded mt-2">
+      <li>
+        <a href="../pages/add_trainer.html" 
+           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+          <i class="fas fa-users mr-3"></i> Add Trainee
+        </a>
+      </li>
+      <li>
+        <a href="../pages/dropped_trainee.html" 
+           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+          <i class="fas fa-user-check mr-3"></i> Dropped Trainee
+        </a>
+      </li>
+      <li>
+        <a href="../pages/member_details.html" 
+           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+          <i class="fas fa-chalkboard-teacher mr-3"></i> Member Details
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <!-- Other Links -->
+  <li class="my-3">
+    <a href="#"
+       class="flex items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+      <i class="fas fa-dumbbell mr-3"></i> Trainer
+    </a>
+  </li>
+  <li class="my-3">
+    <a href="#"
+       class="flex items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+      <i class="fas fa-user mr-3"></i> Trainee
+    </a>
+  </li>
+  <li class="my-3">
+    <a href="#"
+       class="flex items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+      <i class="fas fa-heartbeat mr-3"></i> Health Updates
+    </a>
+  </li>
+  <li class="my-3">
+    <a href="#"
+       class="flex items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+      <i class="fas fa-wallet mr-3"></i> Member Payments
+    </a>
+  </li>
+  <li class="my-3">
+    <a href="#"
+       class="flex items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+      <i class="fas fa-clipboard mr-3"></i> Plan
+    </a>
+  </li>
+</ul>
+</div>
+        <!-- Main Content -->
+        <div class="p-5">
+          <div class="mt-6 bg-white shadow-md rounded-lg p-4 py-2 px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-4">
+                <h2 class="text-lg font-semibold">Add Membership</h2>
+                <div class="flex items-center space-x-2 mt-2 md:mt-0">
+
+                <div class="relative">
+                   <i class="fas fa-search absolute right-3 top-3 text-gray-400"></i>
+                   <input type="text" placeholder="Search here"
+                    class="border border-grey-500 rounded-full pl-5 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full" />
+                </div>
+                </div>
+              </div>
+              
+              <hr class="-mx-4 mb-4 border-t-2 border-black rounded-lg">
+              <form class="grid grid-cols-2 gap-6"> 
+                <div class="col-span-2 flex justify-start space-x-16">
+                  <div>
+                    <label class="block text-gray-700">Membership Name</label>
+                    <input type="text" 
+                           class="w-80 mt-1 p-2 border border-gray-300 rounded-sm border-l-4 border-l-blue-500">
+                  </div>
+                  <div>
+                    <label class="block text-gray-700">Amount</label>
+                    <input type="text" 
+                           class="w-80 mt-1 p-2 border border-gray-300 rounded-sm border-l-4 border-l-blue-500">
+                  </div>
+               </div>
+                  <div class="col-span-2 flex justify-start space-x-16">
+                    <div>
+                      <label class="block text-gray-700">Membership Period</label>
+                      <input type="text" 
+                             class="w-80 mt-1 p-2 border border-gray-300 rounded-sm border-l-4 border-l-blue-500">
+                    </div>
+                    <div>
+                      <label class="block text-gray-700">Installment Period</label>
+                      <input type="text" 
+                             class="w-80 mt-1 p-2 border border-gray-300 rounded-sm border-l-4 border-l-blue-500">
+                    </div>
+                    </div>
+
+                <div class="col-span-2">
+                  <label class="block text-gray-700">Description</label>
+                  <textarea class="w-1/2 mt-1 p-2 border border-gray-300 rounded-sm border-l-4 border-l-blue-500"></textarea>
+                </div>
+                
+
+                <div class="col-span-2 flex justify-start space-x-4">
+                  <button type="submit"
+                    class="bg-orange-500 text-white px-6 py-2 rounded-md hover:bg-orange-600">Save</button>
+                    <button type="reset"
+                    class="bg-gray-500 text-white px-6 py-2 rounded-md hover:bg-gray-600">Reset</button>
+                </div>
+              </form>
+            </div>
+          </div>
+      </div>
+        </div>
+        <script>
+          // JavaScript for Sidebar Toggling
+          const hamburger = document.getElementById('hamburger');
+          const sidebar = document.getElementById('sidebar');
+      
+          hamburger.addEventListener('click', () => {
+            // Toggle the sidebar visibility
+            if (sidebar.classList.contains('-translate-x-full')) {
+              sidebar.classList.remove('-translate-x-full');
+            } else {
+              sidebar.classList.add('-translate-x-full');
+            }
+          });
+      
+          // Close sidebar if clicked outside (optional)
+          window.addEventListener('click', (event) => {
+            if (!sidebar.contains(event.target) && !hamburger.contains(event.target) && !sidebar.classList.contains('-translate-x-full')) {
+              sidebar.classList.add('-translate-x-full');
+            }
+          });
+      
+          
+          document.querySelectorAll('input[type="checkbox"]').forEach(toggle => {
+        toggle.addEventListener('change', function () {
+          const label = this.nextElementSibling;
+          const subsections = label.nextElementSibling;
+  
+          if (this.checked) {
+      subsections.classList.remove('hidden'); // Show dropdown
+    } else {
+      subsections.classList.add('hidden'); // Hide dropdown
+    }
+        });
+      });
+        </script>
+      </body>
+</html>

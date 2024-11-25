@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Sidebar</title>
+</head>
+
+<body class="w-full h-screen bg-gray-800 text-white p-4">
+  <!-- Sidebar -->
+  <div class="fixed top-0 left-0 bg-black w-64 h-full text-white p-5 box-border">
+    <div class="text-center mb-6">
+      <img src="../assets/images/logo.png" alt="Logo" class="block mx-auto mb-4 w-32 h-auto">
+    </div>
+    <ul>
+      <!-- Admin Section -->
+      <li>
+        <input type="checkbox" id="admin-toggle" class="hidden">
+        <label for="admin-toggle" class="flex items-center justify-between p-3 rounded cursor-pointer hover:bg-gray-700">
+          <span class="flex items-center">
+            <i class="fas fa-user-shield mr-3"></i> Admin
+          </span>
+        </label>
+        <ul class="hidden px-2 bg-gray-700 rounded">
+          <li class="my-1"><a href="#" class="flex items-center p-2 text-sm hover:text-orange-500"><i class="fas fa-user mr-3"></i> Staff/Trainers</a></li>
+          <li class="my-1"><a href="#" class="flex items-center p-2 text-sm hover:text-orange-500"><i class="fas fa-credit-card mr-3"></i> Membership</a></li>
+          <li class="my-1"><a href="#" class="flex items-center p-2 text-sm hover:text-orange-500"><i class="fas fa-dumbbell mr-3"></i> All Classes</a></li>
+          <li class="my-1"><a href="#" class="flex items-center p-2 text-sm hover:text-orange-500"><i class="fas fa-calendar-check mr-3"></i> Attendance</a></li>
+        </ul>
+      </li>
+
+      <!-- Member Section -->
+      <li>
+        <input type="checkbox" id="member-toggle" class="hidden">
+        <label for="member-toggle" class="flex items-center justify-between p-3 rounded cursor-pointer hover:bg-gray-700">
+          <span class="flex items-center">
+            <i class="fas fa-users mr-3"></i> All Members
+          </span>
+        </label>
+        <ul class="hidden px-2 bg-gray-700 rounded">
+          <!-- Add this to the "Add Trainee" link in the sidebar -->
+<li class="my-1">
+  <a href="../pages/add_trainer.html" class="flex items-center p-2 text-sm hover:text-orange-500">
+    <i class="fas fa-user mr-3"></i> Add Trainee
+  </a>
+</li>
+
+          <li class="my-1"><a href="#" class="flex items-center p-2 text-sm hover:text-orange-500"><i class="fas fa-credit-card mr-3"></i> Dropped Trainee</a></li>
+          <li class="my-1"><a href="#" class="flex items-center p-2 text-sm hover:text-orange-500"><i class="fas fa-dumbbell mr-3"></i> Member Details</a></li>
+        </ul>
+      </li>
+
+      <!-- Other Links -->
+      <li class="my-1"><a href="#" class="flex items-center p-3 rounded hover:bg-gray-700"><i class="fas fa-dumbbell mr-3"></i> Trainer</a></li>
+      <li class="my-1"><a href="#" class="flex items-center p-3 rounded hover:bg-gray-700"><i class="fas fa-user mr-3"></i> Trainee</a></li>
+      <li class="my-1"><a href="#" class="flex items-center p-3 rounded hover:bg-gray-700"><i class="fas fa-heartbeat mr-3"></i> Health Updates</a></li>
+      <li class="my-1"><a href="#" class="flex items-center p-3 rounded hover:bg-gray-700"><i class="fas fa-wallet mr-3"></i> Member Payments</a></li>
+      <li class="my-1"><a href="#" class="flex items-center p-3 rounded hover:bg-gray-700"><i class="fas fa-clipboard mr-3"></i> Plan</a></li>
+    </ul>
+  </div>
+
+  <script>
+    // Toggle subsections visibility
+    document.querySelectorAll('input[type="checkbox"]').forEach(toggle => {
+      toggle.addEventListener('change', function () {
+        const label = this.nextElementSibling;
+        const subsections = label.nextElementSibling;
+
+        if (this.checked) {
+          subsections.classList.remove('hidden');
+          label.querySelector('i').classList.add('rotate-180');
+        } else {
+          subsections.classList.add('hidden');
+          label.querySelector('i').classList.remove('rotate-180');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+

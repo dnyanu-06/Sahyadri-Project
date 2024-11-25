@@ -1,0 +1,159 @@
+/* Reset CSS */
+
+  /* Full Page Background */
+  body {
+    background:linear-gradient(rgba(0, 0, 0, 0.599), rgba(0, 0, 0, 0.642)),url('../assets/images/background_gym_image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  
+  /* Logo Styling */
+  .logo {
+    text-align: center;
+    margin-bottom: 10px;
+    width: 250px;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+ 
+  .login-container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.322);
+    padding: 40px;
+    width: 550px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+  }
+
+  /* Form Styling */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputs {
+    margin-bottom: 15px;
+  
+    
+  }
+
+  .eye-icon {
+    position: absolute;
+    right: 50px;
+    top: 57%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+  .inputs label {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .inputs input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  /* Links */
+  .form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .signup-link {
+    color: #2512f3;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .forgot-link {
+    color: #f36c12;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .signup-link:hover,
+  .forgot-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Button Styling */
+  .login-btn {
+    background-color: #e67e22;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    width: 250px;
+    position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  
+  .login-btn:hover {
+    background-color: #d35400;
+  }
+  
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 200px;
+        top: 15%;
+    }
+
+    .login-container {
+        width: 90%;
+        padding: 20px;
+        top: 50%;
+    }
+
+    .login-btn {
+        width: 80%;
+        top: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 150px;
+        top: 10%;
+    }
+
+    .login-container {
+        width: 90%;
+        padding: 15px;
+        top: 45%;
+    }
+
+    .inputs input {
+        font-size: 12px;
+    }
+
+    .login-btn {
+        width: 50%;
+        top: 90%;
+    }
+}
