@@ -20,82 +20,149 @@
         <!-- <div class="flex-1">
             
             <iframe src="../components/header.html" class="w-full h-20 border-b-2"></iframe> -->
+ 
             <div class="flex h-screen flex-col md:flex-row">
 
-                <!-- Sidebar -->
-  <div class="fixed top-0 left-0 bg-black w-64 h-full text-white p-5 box-border">
-    <div class="text-center mb-6">
-      <img src="../assets/images/logo.png" alt="Logo" class="block mx-auto mb-4 w-32 h-auto">
-    </div>
-    <ul>
-      <!-- Admin Section -->
-      <li>
-        <input type="checkbox" id="admin-toggle" class="hidden">
-        <label for="admin-toggle" class="flex items-center justify-between p-3 rounded cursor-pointer hover:bg-gray-700">
-          <span class="flex items-center">
-            <i class="fas fa-user-shield mr-3"></i> Admin
-          </span>
-        </label>
-        <ul class="hidden px-2 bg-gray-700 rounded">
-          <li class="my-1"><a href="#" class="flex items-center p-2 text-sm hover:text-orange-500"><i class="fas fa-user mr-3"></i> Staff/Trainers</a></li>
-          <li class="my-1"><a href="#" class="flex items-center p-2 text-sm hover:text-orange-500"><i class="fas fa-credit-card mr-3"></i> Membership</a></li>
-          <li class="my-1"><a href="#" class="flex items-center p-2 text-sm hover:text-orange-500"><i class="fas fa-dumbbell mr-3"></i> All Classes</a></li>
-          <li class="my-1"><a href="#" class="flex items-center p-2 text-sm hover:text-orange-500"><i class="fas fa-calendar-check mr-3"></i> Attendance</a></li>
-        </ul>
-      </li>
-
-      <!-- Member Section -->
-      <li>
-        <input type="checkbox" id="member-toggle" class="hidden">
-        <label for="member-toggle" class="flex items-center justify-between p-3 rounded cursor-pointer hover:bg-gray-700">
-          <span class="flex items-center">
-            <i class="fas fa-users mr-3"></i> All Members
-          </span>
-        </label>
-        <ul class="hidden px-2 bg-gray-700 rounded">
-          <!-- Add this to the "Add Trainee" link in the sidebar -->
-<li class="my-1">
-  <a href="../pages/add_trainer.html" class="flex items-center p-2 text-sm hover:text-orange-500">
-    <i class="fas fa-user mr-3"></i> Add Trainee
-  </a>
-</li>
-
-          <li class="my-1"><a href="#" class="flex items-center p-2 text-sm hover:text-orange-500"><i class="fas fa-credit-card mr-3"></i> Dropped Trainee</a></li>
-          <li class="my-1"><a href="#" class="flex items-center p-2 text-sm hover:text-orange-500"><i class="fas fa-dumbbell mr-3"></i> Member Details</a></li>
-        </ul>
-      </li>
-
-      <!-- Other Links -->
-      <li class="my-1"><a href="#" class="flex items-center p-3 rounded hover:bg-gray-700"><i class="fas fa-dumbbell mr-3"></i> Trainer</a></li>
-      <li class="my-1"><a href="#" class="flex items-center p-3 rounded hover:bg-gray-700"><i class="fas fa-user mr-3"></i> Trainee</a></li>
-      <li class="my-1"><a href="#" class="flex items-center p-3 rounded hover:bg-gray-700"><i class="fas fa-heartbeat mr-3"></i> Health Updates</a></li>
-      <li class="my-1"><a href="#" class="flex items-center p-3 rounded hover:bg-gray-700"><i class="fas fa-wallet mr-3"></i> Member Payments</a></li>
-      <li class="my-1"><a href="#" class="flex items-center p-3 rounded hover:bg-gray-700"><i class="fas fa-clipboard mr-3"></i> Plan</a></li>
-    </ul>
-  </div>
-            
-                <!-- Main Content Area -->
-                <div id="main-content" class="flex-1 pl-0 md:pl-64 transition-all duration-300">
-            
-                  <!-- Hamburger Icon -->
-                  <div class="md:hidden p-4">
-                    <button id="hamburger" class="text-gray-600">
-                      <i class="fas fa-bars"></i>
-                    </button>
-                  </div>
-            
-                  <!-- Header -->
-                  <header class="flex justify-between items-center p-4 bg-gray-200 shadow-md">
-                    <h1 class="text-xl font-bold">Welcome Admin!</h1>
-                    <div class="flex items-center space-x-4">
-                      <button class="text-gray-600"><i class="fas fa-bell"></i></button>
-                      <button class="text-gray-600"><i class="fas fa-cog"></i></button>
-                      <div class="flex items-center">
-                        <h1 class="text-lg font-bold">Username</h1>
-                        <img src="../assets/images/User.png" alt="User" class="w-10 h-10 rounded-full border ml-2">
-                      </div>
+              <!-- Sidebar -->
+              <div id="sidebar"
+                class="w-64 bg-black text-white p-5 box-border fixed top-0 left-0 h-full transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-10">
+                <div class="text-center mb-6">
+                  <img src="../assets/images/logo.png" alt="Logo" class="block mx-auto mb-4 w-32 h-auto">
+                </div>
+                <ul>
+                  <!-- Admin Section -->
+                  <li class="relative group mb-3">
+                    <!-- Admin Menu -->
+                    <a href="#"
+                       class="flex items-center justify-between px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+                      <span class="flex items-center">
+                        <i class="fas fa-user-shield mr-3"></i> Admin
+                      </span>
+                      <!-- Arrow Icon -->
+                      <i class="fas fa-chevron-down ml-auto hidden group-hover:inline-block transform transition-transform"></i>
+                    </a>
+                    
+                    <!-- Dropdown Menu -->
+                    <ul class="ml-4 hidden group-hover:block bg-gray-700 rounded mt-2">
+                      <li>
+                        <a href="../pages/staff_trainer.html" 
+                           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+                          <i class="fas fa-users mr-3"></i> Staff / Trainers
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../pages/membership.html" 
+                           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+                          <i class="fas fa-user-check mr-3"></i> Membership
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../pages/all_classes.html" 
+                           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+                          <i class="fas fa-chalkboard-teacher mr-3"></i> All Classes
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../pages/attendance.html" 
+                           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+                          <i class="fas fa-calendar-check mr-3"></i> Attendance
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+              
+                  <!-- All Members Section -->
+                  <li class="relative group mb-3">
+                    <!-- Admin Menu -->
+                    <a href="#"
+                       class="flex items-center justify-between px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+                      <span class="flex items-center">
+                        <i class="fas fa-user-shield mr-3"></i> All Members
+                      </span>
+                      <!-- Arrow Icon -->
+                      <i class="fas fa-chevron-down ml-auto hidden group-hover:inline-block transform transition-transform"></i>
+                    </a>
+                    
+                    <!-- Dropdown Menu -->
+                    <ul class="ml-4 hidden group-hover:block bg-gray-700 rounded mt-2">
+                      <li>
+                        <a href="../pages/add_trainer.html" 
+                           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+                          <i class="fas fa-users mr-3"></i> Add Trainee
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../pages/dropped_trainee.html" 
+                           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+                          <i class="fas fa-user-check mr-3"></i> Dropped Trainee
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../pages/member_details.html" 
+                           class="flex items-center px-4 py-2 rounded-md menu-item hover:text-orange-500">
+                          <i class="fas fa-chalkboard-teacher mr-3"></i> Member Details
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+              
+                  <!-- Other Links -->
+                  <li class="my-3">
+                    <a href="#"
+                       class="flex items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+                      <i class="fas fa-dumbbell mr-3"></i> Trainer
+                    </a>
+                  </li>
+                  <li class="my-3">
+                    <a href="#"
+                       class="flex items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+                      <i class="fas fa-user mr-3"></i> Trainee
+                    </a>
+                  </li>
+                  <li class="my-3">
+                    <a href="#"
+                       class="flex items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+                      <i class="fas fa-heartbeat mr-3"></i> Health Updates
+                    </a>
+                  </li>
+                  <li class="my-3">
+                    <a href="#"
+                       class="flex items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+                      <i class="fas fa-wallet mr-3"></i> Member Payments
+                    </a>
+                  </li>
+                  <li class="my-3">
+                    <a href="#"
+                       class="flex items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-700">
+                      <i class="fas fa-clipboard mr-3"></i> Plan
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              
+              
+                  <!-- Main Content Area -->
+                  <div id="main-content" class="flex-1 pl-0 md:pl-64 transition-all duration-300">
+              
+                    <!-- Hamburger Icon -->
+                    <div class="md:hidden p-4">
+                      <button id="hamburger" class="text-gray-600">
+                        <i class="fas fa-bars"></i>
+                      </button>
                     </div>
-                  </header>
+              
+                    <!-- Header -->
+                    <header class="flex justify-between items-center p-4 bg-gray-200 shadow-md">
+                      <h1 class="text-xl font-bold">Welcome Admin!</h1>
+                      <div class="flex items-center space-x-4">
+                        <button class="text-gray-600"><i class="fas fa-bell"></i></button>
+                        <button class="text-gray-600"><i class="fas fa-cog"></i></button>
+                        <div class="flex items-center">
+                          <h1 class="text-lg font-bold">Username</h1>
+                          <img src="../assets/images/User.png" alt="User" class="w-10 h-10 rounded-full border ml-2">
+                        </div>
+                      </div>
+                    </header>
 
             <!-- Dashboard Section -->
             <div class="p-6">
