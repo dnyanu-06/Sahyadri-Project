@@ -42,6 +42,6 @@ The Add Trainer Form allows you to input the necessary details for a new trainer
 After filling in the necessary information in the Add Trainer Form, click the Save button.
 The Trainer/Staff Details Page displays the complete information of the newly added trainer or staff member, including their name, email, contact details, and expertise.
 
-![Staff/Trainer Page](assets/images/view_details_page.png)
+![Staff/Trainer Page](assets/images/view_detail_page.png)
 
 
